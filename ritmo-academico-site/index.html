@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hoje · Ritmo Acadêmico</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
+</head>
+<body data-pagina="hoje">
+    <a class="pular" href="#principal">Pular para o conteúdo</a>
+    <header class="topo-site">
+        <a class="marca" href="index.html"><img src="assets/img/logo.svg" alt="" width="28" height="28"><span>Ritmo Acadêmico</span></a>
+        <button type="button" id="tema" class="botao-texto">Tema escuro</button>
+        <nav aria-label="Principal"><ul><li><a href="index.html" aria-current="page">Hoje</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="nova-tarefa.html">Nova tarefa</a></li><li><a href="sobre.html">Sobre</a></li></ul></nav>
+    </header>
+    <main id="principal">
+        <h1>Hoje</h1>
+        <p id="data-hoje" class="apoio"></p>
+        <p id="aviso" class="aviso" role="status" hidden></p>
+        <div id="com-tarefas" class="duas-colunas">
+            <section aria-labelledby="h-prox">
+                <h2 id="h-prox">Próximo prazo</h2>
+                <div id="destaque"></div>
+            </section>
+            <section aria-labelledby="h-dep">
+                <h2 id="h-dep">Depois</h2>
+                <ul id="lista-depois" class="lista"></ul>
+            </section>
+        </div>
+        <section id="vazio" class="vazio" aria-labelledby="h-vazio" hidden>
+            <h2 id="h-vazio">Nenhuma tarefa ainda</h2>
+            <p>Cadastre prazos de provas, trabalhos e leituras para ver aqui o que vence primeiro.</p>
+            <a class="botao-contorno" href="nova-tarefa.html">Cadastrar primeira tarefa</a>
+            <button type="button" id="exemplos" class="botao-texto">Carregar tarefas de exemplo</button>
+        </section>
+        <a id="cta" class="botao-preto" href="nova-tarefa.html">+ Nova tarefa</a>
+    </main>
+    <footer>
+        <p>Ritmo Acadêmico · Desenvolvimento de Interfaces · ADS/CEUB</p>
+    </footer>
+</body>
+</html>

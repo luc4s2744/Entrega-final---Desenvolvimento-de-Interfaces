@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nova tarefa · Ritmo Acadêmico</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
+</head>
+<body data-pagina="nova">
+    <a class="pular" href="#principal">Pular para o conteúdo</a>
+    <header class="topo-site">
+        <a class="marca" href="index.html"><img src="assets/img/logo.svg" alt="" width="28" height="28"><span>Ritmo Acadêmico</span></a>
+        <button type="button" id="tema" class="botao-texto">Tema escuro</button>
+        <nav aria-label="Principal"><ul><li><a href="index.html">Hoje</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="nova-tarefa.html" aria-current="page">Nova tarefa</a></li><li><a href="sobre.html">Sobre</a></li></ul></nav>
+    </header>
+    <main id="principal" class="estreito">
+        <h1>Cadastro rápido</h1>
+        <form id="form" action="index.html" method="get">
+            <p class="campo">
+                <label for="titulo">Título</label>
+                <input type="text" id="titulo" name="titulo" required minlength="3" maxlength="60" placeholder="Ex.: Entregar o relatório" autocomplete="off" aria-describedby="erro-titulo">
+                <span id="erro-titulo" class="erro" hidden></span>
+            </p>
+            <p class="campo">
+                <label for="disciplina">Disciplina</label>
+                <input type="text" id="disciplina" name="disciplina" required maxlength="40" list="disciplinas" placeholder="Digite ou escolha" autocomplete="off" aria-describedby="erro-disciplina">
+                <datalist id="disciplinas"></datalist>
+                <span id="erro-disciplina" class="erro" hidden></span>
+            </p>
+            <div class="campo">
+                <label for="prazo">Prazo</label>
+                <div id="atalhos" class="chips" role="group" aria-label="Atalhos de data"></div>
+                <input type="date" id="prazo" name="prazo" required aria-describedby="erro-prazo">
+                <span id="erro-prazo" class="erro" hidden></span>
+            </div>
+            <fieldset class="campo">
+                <legend>Tipo (opcional)</legend>
+                <div class="opcoes">
+                    <input type="radio" id="tipo-prova" name="tipo" value="Prova" class="so-leitor"><label for="tipo-prova">Prova</label>
+                    <input type="radio" id="tipo-trabalho" name="tipo" value="Trabalho" class="so-leitor"><label for="tipo-trabalho">Trabalho</label>
+                    <input type="radio" id="tipo-leitura" name="tipo" value="Leitura" class="so-leitor"><label for="tipo-leitura">Leitura</label>
+                </div>
+            </fieldset>
+            <p class="campo">
+                <label for="notas">Anotações (opcional)</label>
+                <textarea id="notas" name="notas" rows="3" maxlength="200"></textarea>
+            </p>
+            <div class="acoes">
+                <button type="submit" class="botao-preto">Salvar</button>
+                <a class="botao-contorno" href="index.html">Cancelar</a>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>Ritmo Acadêmico · Desenvolvimento de Interfaces · ADS/CEUB</p>
+    </footer>
+</body>
+</html>

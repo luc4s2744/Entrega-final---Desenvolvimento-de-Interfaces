@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Detalhe da tarefa · Ritmo Acadêmico</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
+</head>
+<body data-pagina="tarefa">
+    <a class="pular" href="#principal">Pular para o conteúdo</a>
+    <header class="topo-site">
+        <a class="marca" href="index.html"><img src="assets/img/logo.svg" alt="" width="28" height="28"><span>Ritmo Acadêmico</span></a>
+        <button type="button" id="tema" class="botao-texto">Tema escuro</button>
+        <nav aria-label="Principal"><ul><li><a href="index.html">Hoje</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="nova-tarefa.html">Nova tarefa</a></li><li><a href="sobre.html">Sobre</a></li></ul></nav>
+    </header>
+    <main id="principal" class="estreito">
+        <p><a href="index.html" id="voltar">← Voltar</a></p>
+        <section id="detalhe" aria-labelledby="t-titulo">
+            <p class="apoio">Detalhe da tarefa</p>
+            <h1 id="t-titulo"></h1>
+            <dl class="detalhes">
+                <div class="linha"><dt>Disciplina</dt><dd id="t-disciplina"></dd></div>
+                <div class="linha"><dt>Tipo</dt><dd id="t-tipo"></dd></div>
+                <div class="linha"><dt>Prazo</dt><dd id="t-prazo"></dd></div>
+                <div class="linha"><dt>Tempo restante</dt><dd id="t-tempo"></dd></div>
+                <div class="linha"><dt>Anotações</dt><dd id="t-notas"></dd></div>
+            </dl>
+            <p id="aviso" class="aviso" role="status" hidden></p>
+            <div class="acoes">
+                <button type="button" id="concluir" class="botao-preto">Marcar como concluída</button>
+                <button type="button" id="excluir" class="botao-contorno">Excluir</button>
+            </div>
+        </section>
+        <section id="nao-achou" hidden>
+            <h1>Tarefa não encontrada</h1>
+            <p>Ela pode ter sido excluída. <a href="index.html">Voltar para Hoje</a></p>
+        </section>
+        <dialog id="dialogo" class="dialogo" aria-labelledby="d-titulo">
+            <h2 id="d-titulo">Excluir esta tarefa?</h2>
+            <p>Essa ação não pode ser desfeita.</p>
+            <div class="acoes linha-acoes">
+                <button type="button" id="d-cancelar" class="botao-contorno">Cancelar</button>
+                <button type="button" id="d-confirmar" class="botao-preto">Excluir</button>
+            </div>
+        </dialog>
+    </main>
+    <footer>
+        <p>Ritmo Acadêmico · Desenvolvimento de Interfaces · ADS/CEUB</p>
+    </footer>
+</body>
+</html>

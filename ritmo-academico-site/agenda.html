@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agenda · Ritmo Acadêmico</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
+</head>
+<body data-pagina="agenda">
+    <a class="pular" href="#principal">Pular para o conteúdo</a>
+    <header class="topo-site">
+        <a class="marca" href="index.html"><img src="assets/img/logo.svg" alt="" width="28" height="28"><span>Ritmo Acadêmico</span></a>
+        <button type="button" id="tema" class="botao-texto">Tema escuro</button>
+        <nav aria-label="Principal"><ul><li><a href="index.html">Hoje</a></li><li><a href="agenda.html" aria-current="page">Agenda</a></li><li><a href="nova-tarefa.html">Nova tarefa</a></li><li><a href="sobre.html">Sobre</a></li></ul></nav>
+    </header>
+    <main id="principal">
+        <h1>Agenda</h1>
+        <div class="barra">
+            <div id="filtros" role="group" aria-label="Filtrar por tipo">
+                <button type="button" class="chip" data-filtro="todos" aria-pressed="true">Todos</button>
+                <button type="button" class="chip" data-filtro="Prova" aria-pressed="false">Prova</button>
+                <button type="button" class="chip" data-filtro="Trabalho" aria-pressed="false">Trabalho</button>
+                <button type="button" class="chip" data-filtro="Leitura" aria-pressed="false">Leitura</button>
+            </div>
+            <p class="campo-linha">
+                <label for="ordem">Ordenar por</label>
+                <select id="ordem">
+                    <option value="data">Data</option>
+                    <option value="titulo">Título</option>
+                    <option value="disciplina">Disciplina</option>
+                </select>
+            </p>
+        </div>
+        <section aria-labelledby="h-lista">
+            <h2 id="h-lista">Tarefas pendentes</h2>
+            <p id="contagem" class="apoio" aria-live="polite"></p>
+            <ul id="lista-agenda" class="lista grade"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>Ritmo Acadêmico · Desenvolvimento de Interfaces · ADS/CEUB</p>
+    </footer>
+</body>
+</html>
