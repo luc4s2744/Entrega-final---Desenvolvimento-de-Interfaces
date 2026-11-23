@@ -109,6 +109,10 @@ input[aria-invalid="true"] { border: 2px solid var(--preto); }
 /* Sobre */
 .passos { padding-left: 20px; list-style: decimal; }
 .passos li { margin-bottom: 6px; }
+#botao-projeto{
+    color: var(--pagina);
+    text-decoration: none;
+}
 
 /* Equivalente em CSS puro do cartão em Tailwind (sobre.html), para comparar:
 .cartao-equipe { max-width: 28rem; padding: 1rem; border: 1px solid var(--borda); border-radius: 6px; background: var(--fundo); }
